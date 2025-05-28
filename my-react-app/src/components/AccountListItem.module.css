@@ -1,0 +1,129 @@
+/* src/components/AccountListItem.module.css */
+
+.card {
+  background-color: var(--white);
+  border-radius: var(--border-radius-md);
+  padding: 1.25rem;
+  margin-bottom: 1rem;
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow 0.25s ease-in-out, transform 0.25s ease-in-out;
+  border: 1px solid transparent; /* For subtle border changes if needed */
+}
+
+.card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-3px); /* Lifts the card slightly */
+}
+
+.cardIsSplit {
+  /* Herda de .card, mas com um fundo diferente para destacar */
+  composes: card; 
+  background-color: #f0fcf9; /* Um tom de verde muito claro, quase branco */
+  border-left: 4px solid var(--success-color);
+}
+
+.header {
+  margin-bottom: 0.75rem;
+}
+
+.accountName {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--text-color);
+  margin-right: 0.5rem; /* Espaço para o indicador de divisão */
+}
+
+.splitIndicator {
+  font-size: 0.9rem;
+  font-weight: normal;
+  color: var(--success-color); /* Usar cor de sucesso para o indicador */
+}
+
+.detailText {
+  font-size: 0.95rem;
+  color: var(--text-color-light);
+  margin-bottom: 0.3rem;
+}
+
+.detailText strong {
+  color: var(--text-color);
+  font-weight: 500;
+}
+
+.responsibleName {
+  /* Pode ser igual ao .detailText strong ou ter um estilo específico */
+}
+
+.splitDetailsSection {
+  margin-top: 1rem;
+  padding: 0.75rem;
+  background-color: var(--light-bg); /* Fundo ligeiramente diferente */
+  border-radius: var(--border-radius-sm);
+  border: 1px solid #e9ecef;
+}
+
+.splitDetailsTitle {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-color);
+  margin-bottom: 0.5rem;
+}
+
+.splitDetailItem {
+  font-size: 0.9rem;
+  color: var(--text-color-light);
+  margin-bottom: 0.25rem;
+  padding-left: 1rem; /* Indentação para itens da lista */
+  list-style-type: disc; /* Estilo de marcador */
+}
+
+.splitDetailItem strong {
+  color: var(--text-color);
+}
+
+.actionsContainer {
+  margin-top: 1rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid #eee; /* Linha separadora antes dos botões */
+  display: flex;
+  justify-content: flex-end; /* Alinha botões à direita */
+  gap: 0.5rem;
+}
+
+.actionButton {
+  padding: 0.4rem 0.8rem;
+  font-size: 0.85rem;
+  border-radius: var(--border-radius-sm);
+  background-color: transparent;
+  border: 1px solid var(--light-grey-border);
+  color: var(--text-color-light);
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.editButton:hover {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  color: var(--white);
+}
+
+.deleteButton:hover {
+  background-color: var(--danger-color);
+  border-color: var(--danger-color);
+  color: var(--white);
+}
+
+/* Para animação de entrada - simples fade-in e slide-up */
+@keyframes fadeInSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animateIn {
+  animation: fadeInSlideUp 0.4s ease-out forwards;
+}

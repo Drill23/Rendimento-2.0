@@ -1,0 +1,36 @@
+/* src/components/Header.module.css */
+
+.header {
+  background-color: var(--primary-color);
+  color: var(--white);
+  padding: 1rem 1.5rem;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  margin: 0;
+  font-size: 1.75rem;
+  font-weight: 500;
+}
+
+.nav {
+  display: flex;
+  gap: 1rem; /* Espaçamento entre os links */
+}
+
+.navLink {
+  color: var(--white);
+  text-decoration: none;
+  padding: 0.5rem 0.75rem;
+  border-radius: var(--border-radius-sm);
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.navLink:hover {
+  background-color: var(--primary-color-dark);
+  color: var(--white); /* Mantém a cor do texto ou ajusta conforme necessário */
+  text-decoration: none; /* Garante que não haja sublinhado no hover */
+}

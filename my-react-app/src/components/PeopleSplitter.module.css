@@ -1,0 +1,88 @@
+/* src/components/PeopleSplitter.module.css */
+
+.splitterContainer {
+  /* O container principal já é estilizado pelo AccountForm.module.css */
+  /* Aqui podemos adicionar estilos específicos para o conteúdo interno do PeopleSplitter se necessário */
+}
+
+.title {
+  font-size: 1.1rem;
+  color: var(--text-color);
+  margin-bottom: 0.75rem;
+  font-weight: 500;
+}
+
+.equalSplitCheckboxContainer {
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.equalSplitCheckboxContainer label {
+  margin-bottom: 0;
+  margin-left: .5rem;
+  font-weight: normal;
+  color: var(--text-color-light);
+  font-size: 0.95rem;
+}
+
+.checkboxInput { /* Usado tanto no AccountForm quanto aqui, para consistência */
+  width: auto;
+  margin-right: 0.5rem; 
+}
+
+.personRow {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.75rem;
+  gap: 0.5rem; /* Espaçamento entre os elementos da linha */
+}
+
+.inputName {
+  flex-grow: 1; /* Ocupa o espaço restante */
+  /* Herda estilos globais de input */
+}
+
+.inputAmount {
+  width: 120px; /* Largura fixa para o campo de valor */
+  /* Herda estilos globais de input */
+}
+
+.inputAmount[readonly] {
+  background-color: var(--light-bg);
+  cursor: not-allowed;
+}
+
+.button { /* Estilo base para botões neste componente */
+  padding: 0.5rem 0.75rem; /* Padding um pouco menor para botões internos */
+  font-size: 0.9rem;
+  border-radius: var(--border-radius-sm);
+  color: var(--white);
+  border: none;
+  transition: background-color 0.2s ease-in-out, opacity 0.2s ease-in-out;
+}
+
+.addButton {
+  composes: button; /* Herda de .button */
+  background-color: var(--success-color);
+  margin-top: 0.5rem; /* Espaço acima do botão de adicionar */
+}
+
+.addButton:hover {
+  background-color: var(--success-color-dark);
+}
+
+.removeButton {
+  composes: button; /* Herda de .button */
+  background-color: var(--danger-color);
+  padding: 0.5rem 0.75rem; /* Ajuste se necessário */
+}
+
+.removeButton:hover {
+  background-color: var(--danger-color-dark);
+}
+
+/* Datalist já é funcional, não requer estilo direto complexo */
+.datalist {
+  /* Estilos para o datalist são limitados e controlados pelo navegador */
+}

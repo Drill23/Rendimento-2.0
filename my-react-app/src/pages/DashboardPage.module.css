@@ -1,0 +1,32 @@
+/* src/pages/DashboardPage.module.css */
+
+.pageContainer {
+  padding: 1.5rem;
+  max-width: 900px; /* Limita a largura do conteúdo principal do dashboard */
+  margin: 0 auto; /* Centraliza o container */
+}
+
+.pageTitle {
+  font-size: 2rem; /* Tamanho maior para o título da página */
+  color: var(--text-color);
+  margin-bottom: 1.5rem;
+  text-align: left; /* Alinhamento padrão, pode ser center se preferir */
+  border-bottom: 2px solid var(--primary-color); /* Linha sutil abaixo do título */
+  padding-bottom: 0.5rem;
+}
+
+.noAccountsMessage {
+  text-align: center;
+  padding: 2rem 1rem;
+  color: var(--text-color-light);
+  font-style: italic;
+  font-size: 1.1rem;
+  background-color: var(--light-bg);
+  border-radius: var(--border-radius-md);
+  margin-top: 2rem;
+}
+
+.listContainer {
+  /* Se precisar de estilos específicos para o container da lista. */
+  /* Por exemplo, se a lista em si tiver uma largura máxima menor que pageContainer */
+}

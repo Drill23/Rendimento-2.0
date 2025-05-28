@@ -1,0 +1,87 @@
+/* src/components/AccountForm.module.css */
+
+.form {
+  padding: 1.5rem;
+  background-color: var(--white);
+  border-radius: var(--border-radius-md);
+  /* box-shadow: var(--shadow-sm); Desativado para um visual mais flat, pode ser reativado */
+  max-width: 600px; /* Limita a largura máxima do formulário */
+  margin: 1rem auto; /* Centraliza o formulário na página, se for o componente principal */
+}
+
+.formGroup {
+  margin-bottom: 1.25rem;
+}
+
+.label {
+  display: block;
+  margin-bottom: .5rem;
+  font-weight: 500;
+  color: var(--text-color-light);
+}
+
+/* Inputs já são estilizados globalmente, mas podemos adicionar especificidades se necessário */
+.input {
+  /* Exemplo: border-radius: var(--border-radius-sm); */
+}
+
+.checkboxContainer {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.checkboxContainer label {
+  margin-bottom: 0; /* Remove margin-bottom do label do checkbox */
+  margin-left: .5rem;
+  font-weight: normal; /* Peso normal para o label do checkbox */
+}
+
+.checkboxInput {
+  width: auto; /* Checkboxes não devem ocupar 100% da largura */
+  margin-right: 0.5rem; 
+}
+
+.splitterSection {
+  border: 1px solid var(--light-grey-border);
+  border-radius: var(--border-radius-md);
+  /* Transições para o aparecimento/desaparecimento */
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  margin-top: 0;
+  padding: 0 15px; /* Padding lateral mesmo quando fechado para evitar pulo de largura */
+  border-width: 0 1px; /* Bordas laterais, topo/base aparecem com padding */
+  transition: max-height 0.35s ease-in-out, opacity 0.35s ease-in-out, padding 0.35s ease-in-out, border-width 0.35s ease-in-out, margin-top 0.35s ease-in-out;
+}
+
+.splitterSectionVisible {
+  max-height: 1000px; /* Ajuste conforme o conteúdo máximo esperado */
+  opacity: 1;
+  padding: 15px;
+  margin-top: 1rem;
+  border-width: 1px;
+}
+
+.submitButton {
+  background-color: var(--primary-color);
+  color: var(--white);
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: var(--border-radius-md);
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  margin-top: 1rem; /* Espaço acima do botão */
+}
+
+.submitButton:hover {
+  background-color: var(--primary-color-dark);
+  box-shadow: var(--shadow-sm);
+}
+
+.submitButton:disabled {
+  background-color: var(--secondary-color);
+  cursor: not-allowed;
+}
